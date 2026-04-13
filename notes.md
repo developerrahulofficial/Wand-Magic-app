@@ -25,6 +25,10 @@ body {
 }
 ```
 
+> [!NOTE]
+> **Why `grid` + `place-items: center`?**
+> It's the most efficient way to center a child element both vertically and horizontally in just two lines of code. It replaces the older method of using `top: 50%; left: 50%; transform: translate(-50%, -50%)`.
+
 > [!TIP]
 > **Pro Tip:** Always use `box-sizing: border-box`. It makes "math" easier because `width: 100%` will actually mean 100%, even if you add padding or borders.
 
@@ -54,6 +58,9 @@ This is the grid where the images are "hidden." We use rotation and overlapping 
   overflow: hidden;            /* Hide the image until it is revealed */
 }
 ```
+
+> [!TIP]
+> **Responsive Units:** We use `vmin` (viewport minimum) for widths and radii. This ensures that the magic wand and tiles scale perfectly whether the student is viewing on a tiny phone or a giant classroom projector.
 
 ### Random Rotation & Overlapping
 ```css
@@ -89,6 +96,10 @@ This is the grid where the images are "hidden." We use rotation and overlapping 
 }
 ```
 
+> [!IMPORTANT]
+> **The Interaction Logic:**
+> Notice the `var(--opacity)` and `var(--blur)`. These are empty holes that JavaScript fills in real-time. This is the "bridge" between our static design and the interactive world.
+
 ---
 
 ## 🪄 Section 3: The Magic Wand & Cap
@@ -117,6 +128,9 @@ The wand is the interactive tool. Its design relies on high-quality gradients to
   overflow: hidden;
 }
 ```
+
+> [!NOTE]
+> **Visualization:** To create a 3D effect on a flat screen, we mimic how light hits a cylinder. By putting a light color (`rgb(42 40 44)`) in the center and dark colors on the edges, your brain "sees" a rounded surface.
 
 ### The Wand "Cap" (Tip)
 ```css
